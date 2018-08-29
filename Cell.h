@@ -15,8 +15,6 @@ class Cell
 		int GetNeighbourhoodCount();
 
 	private:
-		const int NEIGHBOURHOODNUM = 3;
-		bool ** mooreNeighbourhood;
 		int positionX;
 		int positionY;
 		bool cellState;

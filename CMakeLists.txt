@@ -13,7 +13,14 @@ find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 
 
-add_executable(Tutorial3b_Conways_Game_Of_Life main.cpp)
+add_executable(	Tutorial3b_Conways_Game_Of_Life
+				main.cpp 
+				Cell.h 
+				Cell.cpp 
+				Game.h 
+				Game.cpp 
+				GameManager.h 
+				GameManager.cpp)
 
 include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS})
 target_link_libraries(Tutorial3b_Conways_Game_Of_Life ${OPENGL_LIBRARIES} ${GLUT_LIBRARIES})
