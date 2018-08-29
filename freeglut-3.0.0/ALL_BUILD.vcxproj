@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EBFB6F85-9A83-394C-B936-98CC95734E04}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\src;D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\include;D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\src;D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\include;D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\src;D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\include;D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\src;D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\include;D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\ZERO_CHECK.vcxproj">
+      <Project>{28D920E3-ACE1-3FCA-84CA-67E1CD795EAA}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\CallbackMaker.vcxproj">
+      <Project>{70FBB73B-5135-30A1-BFA3-D67B295819AE}</Project>
+      <Name>CallbackMaker</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\CallbackMaker_static.vcxproj">
+      <Project>{C8CECD1D-3BE6-34CC-B9D6-FCCF8E337E56}</Project>
+      <Name>CallbackMaker_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\Fractals.vcxproj">
+      <Project>{1CB817AD-4383-3C11-BF82-46228756DAFE}</Project>
+      <Name>Fractals</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\Fractals_random.vcxproj">
+      <Project>{246BEE62-730C-30D6-8ECC-02C82F4BC1FE}</Project>
+      <Name>Fractals_random</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\Fractals_random_static.vcxproj">
+      <Project>{C790ADA8-2488-35FC-8009-04C936646C91}</Project>
+      <Name>Fractals_random_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\Fractals_static.vcxproj">
+      <Project>{25981CDA-7F05-3921-90F6-EF6E897EAF34}</Project>
+      <Name>Fractals_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\Lorenz.vcxproj">
+      <Project>{2226D5F0-A2E3-35E0-9832-14F6ACC7A911}</Project>
+      <Name>Lorenz</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\Lorenz_static.vcxproj">
+      <Project>{67CCC289-8485-3FB7-8F7E-7A85D86E343D}</Project>
+      <Name>Lorenz_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\One.vcxproj">
+      <Project>{2122885A-8481-3472-8B1D-F69D09FEDB7A}</Project>
+      <Name>One</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\One_static.vcxproj">
+      <Project>{0351C9C1-4270-3E4C-8EB7-D51CD1CC7327}</Project>
+      <Name>One_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\Resizer.vcxproj">
+      <Project>{0F0201CF-9A15-3541-95B3-2E601FA07F0D}</Project>
+      <Name>Resizer</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\Resizer_static.vcxproj">
+      <Project>{D0917B8C-074E-3722-B14F-79325F47BC8A}</Project>
+      <Name>Resizer_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\freeglut.vcxproj">
+      <Project>{D79CEE01-C11B-37C5-A48C-F90761D319B5}</Project>
+      <Name>freeglut</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\freeglut_static.vcxproj">
+      <Project>{BC47474C-BEC4-31A0-8F09-DE3BAE4AE8EC}</Project>
+      <Name>freeglut_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\multi-touch.vcxproj">
+      <Project>{7ECE3DD7-9BBE-3462-8D78-54CA6DD2D95B}</Project>
+      <Name>multi-touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\multi-touch_static.vcxproj">
+      <Project>{88FD2105-0C54-3DCA-AE2D-2CD01C6E6AA4}</Project>
+      <Name>multi-touch_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\shapes.vcxproj">
+      <Project>{B610FADE-8F7A-3049-9B8A-80C90F5A6D2E}</Project>
+      <Name>shapes</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\shapes_static.vcxproj">
+      <Project>{51B74537-8551-3E2B-8A59-5336C3931664}</Project>
+      <Name>shapes_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\smooth_opengl3.vcxproj">
+      <Project>{3FFDF468-0109-3A0C-9CD6-D3B827E02EDC}</Project>
+      <Name>smooth_opengl3</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\smooth_opengl3_static.vcxproj">
+      <Project>{189A0C4C-34D2-3F8B-AE5E-9646EFFA2464}</Project>
+      <Name>smooth_opengl3_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\subwin.vcxproj">
+      <Project>{EB0F025C-3B9C-3709-B180-0025C928FE34}</Project>
+      <Name>subwin</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\subwin_static.vcxproj">
+      <Project>{EE8D83D4-3E71-3467-A8F3-E990FDB0030B}</Project>
+      <Name>subwin_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\timer.vcxproj">
+      <Project>{FD14BE37-B758-3344-A65E-4B0171A985A4}</Project>
+      <Name>timer</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\timer_static.vcxproj">
+      <Project>{7FD1FE26-0DD7-3DC0-8D22-0A7CEF8D306E}</Project>
+      <Name>timer_static</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

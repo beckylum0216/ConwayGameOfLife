@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\progs\demos\shapes\shapes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\progs\demos\shapes\glmatrix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Murdoch\ICT290\Tutorial3b_Conways_Game_Of_Life\freeglut-3.0.0\progs\demos\shapes\glmatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5826BEB4-EBB2-35DB-999C-4D7BCAB94D55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A0797E30-1F80-3A4F-965A-59EE66A3FC2F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
