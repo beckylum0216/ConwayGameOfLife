@@ -1,5 +1,6 @@
 #include <iostream>
 #include <GL/freeglut.h>
+#include <math.h>
 
 #include "Game.h"
 #include "Cell.h"
@@ -13,6 +14,19 @@ Game::Game()
 		theGrid[ii] = new Cell[gridY];
 
 	}
+
+	/*
+	for (int ii = 0; ii < gridX; ii++)
+	{
+		for (int jj = 0; jj < gridY; jj++)
+		{
+			theGrid[ii][jj].SetPositionX(ii);
+			theGrid[ii][jj].SetPositionY(jj);
+			theGrid[ii][jj].SetCellState(false);
+			theGrid[ii][jj].SetNeighbourhoodCount(0);
+		}
+	}
+	*/
 }
 
 
@@ -55,8 +69,15 @@ void Game::CheckNeighbourhood(int theGridX, int theGridY )
 int Game::IncrementNeighbour(int inputX, int inputY)
 {
 	int tempNeighbours = 0;
+	int wrapX = 0;
+	int wrapY = 0;
 
-	if (theGrid[inputX][inputY].GetCellState() == true)
+	// to wrap the check around the grid
+	wrapX = abs(inputX) % gridX; // not so sure about this absolute
+	wrapY = abs(inputY) % gridY; // not so sure about this absolute
+
+
+	if (theGrid[wrapX][wrapY].GetCellState() == true)
 	{
 		tempNeighbours = 1;
 	}
@@ -108,7 +129,7 @@ void Game::DrawSquare(int coordX, int coordY)
 		glPushMatrix();
 		glRotatef(180.0, 0.00, 1.00, 0.00);
 			glBegin(GL_QUADS);
-				glColor3f(0.314f, 0.114f, 1.0f);    // Color Red    
+				glColor3f(0.314f, 0.114f, 1.0f);    // Color Blue    
 				glVertex3f(drawX, drawY, 1.0f);    // Top Right Of The Quad (Front)
 				glVertex3f(-drawX, drawY, 1.0f);    // Top Left Of The Quad (Front)
 				glVertex3f(-drawX, -drawY, 1.0f);    // Bottom Left Of The Quad (Front)
@@ -121,7 +142,7 @@ void Game::DrawSquare(int coordX, int coordY)
 		glPushMatrix();
 		glRotatef(180.0, 0.00, 1.00, 0.00);
 			glBegin(GL_QUADS);
-				glColor3f(1.0f, 0.996f, 0.643f);    // Color Red    
+				glColor3f(1.0f, 0.996f, 0.643f);    // Color Yellow   
 				glVertex3f(drawX, drawY, 1.0f);    // Top Right Of The Quad (Front)
 				glVertex3f(-drawX, drawY, 1.0f);    // Top Left Of The Quad (Front)
 				glVertex3f(-drawX, -drawY, 1.0f);    // Bottom Left Of The Quad (Front)
@@ -147,6 +168,7 @@ void Game::DrawGrid()
 
 void Game::GameInit()
 {
+
 	for (int ii = 0; ii < gridX; ii++)
 	{
 		for (int jj = 0; jj < gridY; jj++)
@@ -158,6 +180,19 @@ void Game::GameInit()
 		}
 	}
 
+	// initial blinker
+	theGrid[5][5].SetPositionX(5);
+	theGrid[5][6].SetPositionX(5);
+	theGrid[5][7].SetPositionX(5);
+	theGrid[5][5].SetPositionY(5);
+	theGrid[5][6].SetPositionY(6);
+	theGrid[5][7].SetPositionY(7);
+	theGrid[5][5].SetCellState(true);
+	theGrid[5][6].SetCellState(true);
+	theGrid[5][7].SetCellState(true);
+	theGrid[5][5].SetNeighbourhoodCount(1);
+	theGrid[5][6].SetNeighbourhoodCount(2);
+	theGrid[5][7].SetNeighbourhoodCount(1);
 }
 
 
