@@ -1,31 +1,17 @@
 #include <iostream>
 
-#include "game.h"
+#include "Game.h"
 #include "GL/freeglut.h"
 
-void display();
-void reshape(int w, int h);
-game Conway;
-
-int main(int argc, char **argv) {
-    
-	
-
-	glutInit(&argc, argv);
-	//glutInitDisplayMode();
-	glutCreateWindow("Conway's Game Of Life");
-	glutInitWindowSize(640, 640);
-	glutInitWindowPosition(50, 50);
-	glutDisplayFunc(display);
-	glutReshapeFunc(reshape);
-	glutMainLoop();
-	
-
-    return 0;
-}
+Game Conway;
 
 void display()
 {
+	glMatrixMode(GL_MODELVIEW);
+	// clear the drawing buffer.
+	glClear(GL_COLOR_BUFFER_BIT);
+	glLoadIdentity();
+	Conway.DrawGrid();
 	glFlush();
 	glutSwapBuffers();
 }
@@ -44,6 +30,34 @@ void reshape(int w, int h)
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	glViewport(0, 0, w, h);
-	gluPerspective(45, ratio, 1, 300);
+	gluPerspective(45, ratio, 1, 500);
+	gluLookAt(
+		0.0f, 0.0f, 100.0f,
+		0.0f, 0.0f, 0.0f,
+		0.0f, 1.0f, 0.0f
+	);
 	glMatrixMode(GL_MODELVIEW);
 }
+
+void animation(void)
+{
+	display();
+}
+
+int main(int argc, char **argv) {
+    
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE);
+	glutCreateWindow("Conway's Game Of Life");
+	glutInitWindowSize(640, 640);
+	glutInitWindowPosition(50, 50);
+	Conway.GameInit();
+	glutDisplayFunc(display);
+	glutReshapeFunc(reshape);
+	glutIdleFunc(animation);
+	glutMainLoop();
+	
+
+    return 0;
+}
+

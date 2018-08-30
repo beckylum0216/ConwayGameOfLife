@@ -11,7 +11,7 @@ class Cell
 		int GetPositionY();
 		void SetCellState(bool inputState);
 		bool GetCellState();
-		void SetNeighbourhoodCount();
+		void SetNeighbourhoodCount(int inputCount);
 		int GetNeighbourhoodCount();
 
 	private:

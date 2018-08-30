@@ -9,7 +9,14 @@ class Game
 		Game();
 		virtual~Game();
 		void InputGrid();
-		bool CheckNeighbourhood();
+		void CheckNeighbourhood(int theGridX, int theGridY);
+		int IncrementNeighbour(int inputX, int inputY);
+		void ChangeState(int theInputX, int theInputY);
+		void DrawSquare(int coordX, int coordY);
+		void DrawGrid();
+		void GameInit();
+
+
 
 	private:
 		int gridX;

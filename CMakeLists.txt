@@ -2,9 +2,11 @@ cmake_minimum_required(VERSION 3.11)
 project(Tutorial3b_Conways_Game_Of_Life)
 
 set(CMAKE_CXX_STANDARD 14)
-set(GLUT_LIBRARIES ${CMAKE_CURRENT_LIST_DIR}/freeglut-3.0.0/lib/Release/freeglut.lib)
+set(GLUT_LIBRARIES	${CMAKE_CURRENT_LIST_DIR}/freeglut-3.0.0/lib/Release/freeglut.lib 
+					${CMAKE_CURRENT_LIST_DIR}/freeglut-3.0.0/lib/Debug/freeglutd.lib)
 set(GLUT_INCLUDE_DIR ${CMAKE_CURRENT_LIST_DIR}/freeglut-3.0.0/include)
-set(GLUT_glut_LIBRARY ${CMAKE_CURRENT_LIST_DIR}/freeglut-3.0.0/lib/Release/freeglut.lib)
+set(GLUT_glut_LIBRARY	${CMAKE_CURRENT_LIST_DIR}/freeglut-3.0.0/lib/Release/freeglut.lib
+						${CMAKE_CURRENT_LIST_DIR}/freeglut-3.0.0/lib/Debug/freeglutd.lib)
 
 include_directories(.)
 include_directories(${GLUT_INCLUDE_DIR})

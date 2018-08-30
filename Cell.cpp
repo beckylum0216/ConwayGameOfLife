@@ -3,24 +3,15 @@
 
 Cell::Cell()
 {
-	/*
-	mooreNeighbourhood = new bool *[NEIGHBOURHOODNUM];
-	for (int ii = 0; ii < NEIGHBOURHOODNUM; ii++)
-	{
-		mooreNeighbourhood[ii] = new bool[NEIGHBOURHOODNUM];
-	}
-	*/
+	positionX = 0;
+	positionY = 0;
+	cellState = false;
+	neighbourCount = 0;
 }
 
 Cell::~Cell()
-{	/*
-	for (int ii = 0; ii < NEIGHBOURHOODNUM; ii++)
-	{
-		delete[] mooreNeighbourhood[ii];
-	}
+{	
 
-	delete[] mooreNeighbourhood;
-	*/
 }
 
 void Cell::SetPositionX(int inputX)
