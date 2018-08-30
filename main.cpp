@@ -32,7 +32,7 @@ void reshape(int w, int h)
 	glViewport(0, 0, w, h);
 	gluPerspective(45, ratio, 1, 500);
 	gluLookAt(
-		0.0f, 0.0f, 200.0f,
+		0.0f, 0.0f, 100.0f,
 		0.0f, 0.0f, 0.0f,
 		0.0f, 1.0f, 0.0f
 	);
@@ -41,7 +41,15 @@ void reshape(int w, int h)
 
 void animation(void)
 {
-	display();
+	for (int ii = 0; ii < Conway.GetGridX(); ii++)
+	{
+		for (int jj = 0; jj < Conway.GetGridY(); jj++)
+		{
+			Conway.CheckNeighbourhood(ii, jj);
+			Conway.ChangeState(ii, jj);
+		}
+	}
+	
 }
 
 int main(int argc, char **argv) {
@@ -51,10 +59,11 @@ int main(int argc, char **argv) {
 	glutCreateWindow("Conway's Game Of Life");
 	glutInitWindowSize(640, 640);
 	glutInitWindowPosition(50, 50);
-	Conway.GameInit();
+	
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
 	glutIdleFunc(animation);
+	Conway.GameInit();
 	glutMainLoop();
 	
 

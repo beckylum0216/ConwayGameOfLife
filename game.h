@@ -8,6 +8,8 @@ class Game
 	public:
 		Game();
 		virtual~Game();
+		int GetGridX();
+		int GetGridY();
 		void InputGrid();
 		void CheckNeighbourhood(int theGridX, int theGridY);
 		int IncrementNeighbour(int inputX, int inputY);

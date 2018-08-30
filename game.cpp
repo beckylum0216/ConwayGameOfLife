@@ -15,7 +15,7 @@ Game::Game()
 
 	}
 
-	/*
+	
 	for (int ii = 0; ii < gridX; ii++)
 	{
 		for (int jj = 0; jj < gridY; jj++)
@@ -26,7 +26,8 @@ Game::Game()
 			theGrid[ii][jj].SetNeighbourhoodCount(0);
 		}
 	}
-	*/
+
+
 }
 
 
@@ -39,6 +40,16 @@ Game::~Game()
 	}
 
 	delete[] theGrid;
+}
+
+int Game::GetGridX()
+{
+	return gridX;
+}
+
+int Game::GetGridY()
+{
+	return gridY;
 }
 
 void Game::InputGrid()
@@ -155,12 +166,13 @@ void Game::DrawSquare(int coordX, int coordY)
 
 void Game::DrawGrid()
 {
+
 	for (int ii = 0; ii < gridX; ii++)
 	{
 		for (int jj = 0; jj < gridY; jj++)
 		{
-			CheckNeighbourhood(ii, jj);
-			ChangeState(ii, jj);
+			//CheckNeighbourhood(ii, jj);
+			//ChangeState(ii, jj);
 			DrawSquare(ii, jj);
 		}
 	}
@@ -168,18 +180,6 @@ void Game::DrawGrid()
 
 void Game::GameInit()
 {
-
-	for (int ii = 0; ii < gridX; ii++)
-	{
-		for (int jj = 0; jj < gridY; jj++)
-		{
-			theGrid[ii][jj].SetPositionX(ii);
-			theGrid[ii][jj].SetPositionY(jj);
-			theGrid[ii][jj].SetCellState(false);
-			theGrid[ii][jj].SetNeighbourhoodCount(0);
-		}
-	}
-
 	// initial blinker
 	theGrid[5][5].SetPositionX(5);
 	theGrid[5][6].SetPositionX(5);
