@@ -7,6 +7,7 @@ Cell::Cell()
 	positionY = 0;
 	cellState = false;
 	neighbourCount = 0;
+	nextState = false;
 }
 
 Cell::~Cell()
@@ -48,4 +49,14 @@ void Cell::SetNeighbourhoodCount(int inputCount)
 int Cell::GetNeighbourhoodCount()
 {
 	return neighbourCount;
+}
+
+void Cell::SetNextState(bool inputNextState)
+{
+	nextState = inputNextState;
+}
+
+bool Cell::GetNextState()
+{
+	return nextState;
 }

@@ -1,3 +1,0 @@
-/home/rebecca/murdoch/ICT290/Tutorial3b_Conway's_Game_Of_Life/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/rebecca/murdoch/ICT290/Tutorial3b_Conway's_Game_Of_Life/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/rebecca/murdoch/ICT290/Tutorial3b_Conway's_Game_Of_Life/cmake-build-debug/CMakeFiles/Tutorial3b_Conway_s_Game_Of_Life.dir

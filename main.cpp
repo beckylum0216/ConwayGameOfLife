@@ -7,13 +7,16 @@ Game Conway;
 
 void display()
 {
+	std::cout << "+++Running Display+++" << std::endl;
+	// clear the drawing buffer. dont need depth but anyways
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	glMatrixMode(GL_MODELVIEW);
-	// clear the drawing buffer.
-	glClear(GL_COLOR_BUFFER_BIT);
 	glLoadIdentity();
 	Conway.DrawGrid();
-	glFlush();
+	
 	glutSwapBuffers();
+	//glFlush();
+	std::cout << "+++Running Display+++" << std::endl;
 }
 
 void reshape(int w, int h)
@@ -31,39 +34,65 @@ void reshape(int w, int h)
 	glLoadIdentity();
 	glViewport(0, 0, w, h);
 	gluPerspective(45, ratio, 1, 500);
+	//gluOrtho2D(1.0 * ratio, 1.0 * ratio, -1.0, 1.0);
 	gluLookAt(
-		0.0f, 0.0f, 100.0f,
+		0.0f, 0.0f, 50.0f,
 		0.0f, 0.0f, 0.0f,
 		0.0f, 1.0f, 0.0f
 	);
 	glMatrixMode(GL_MODELVIEW);
 }
 
-void animation(void)
+void animation()
 {
+	
 	for (int ii = 0; ii < Conway.GetGridX(); ii++)
 	{
 		for (int jj = 0; jj < Conway.GetGridY(); jj++)
 		{
-			Conway.CheckNeighbourhood(ii, jj);
 			Conway.ChangeState(ii, jj);
 		}
 	}
-	
+
+	glutPostRedisplay();
 }
+
+void timer(int value)
+{
+
+	for (int ii = 0; ii < Conway.GetGridX(); ii++)
+	{
+		for (int jj = 0; jj < Conway.GetGridY(); jj++)
+		{
+			Conway.ChangeState(ii, jj);
+		}
+	}
+
+	glutPostRedisplay();
+}
+
+void init()
+{
+	glClearColor(0.0, 0.0, 0.0, 0.0);
+
+	glEnable(GL_DEPTH_TEST); // comment this out and see what happens.
+
+}
+
 
 int main(int argc, char **argv) {
     
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 	glutCreateWindow("Conway's Game Of Life");
 	glutInitWindowSize(640, 640);
 	glutInitWindowPosition(50, 50);
-	
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);
 	glutIdleFunc(animation);
+	//glutTimerFunc(50, timer, 0);
 	Conway.GameInit();
+	init();
 	glutMainLoop();
 	
 
