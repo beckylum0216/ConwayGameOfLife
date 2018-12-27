@@ -1,0 +1,3 @@
+file(REMOVE_RECURSE
+  "libTEST_CONWAYS_GOL.a"
+)

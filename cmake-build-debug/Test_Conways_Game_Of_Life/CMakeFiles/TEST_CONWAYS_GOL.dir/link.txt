@@ -1,0 +1,2 @@
+C:\MinGW\bin\ar.exe qc libTEST_CONWAYS_GOL.a  CMakeFiles/TEST_CONWAYS_GOL.dir/pch.cpp.obj
+C:\MinGW\bin\ranlib.exe libTEST_CONWAYS_GOL.a

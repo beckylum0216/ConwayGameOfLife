@@ -1,17 +1,20 @@
 #include <iostream>
+#include <stdlib.h>
 #include <GL/freeglut.h>
 #include <math.h>
 
+#include <pch.h>
+#include <Cellz.h>
 #include "Game.h"
-#include "Cell.h"
+
 
 Game::Game()
 {
 	InputGrid();
-	theGrid = new Cell *[gridX];
+	theGrid = new Cellz *[gridX];
 	for (int ii = 0; ii < gridX; ii++)
 	{
-		theGrid[ii] = new Cell[gridY];
+		theGrid[ii] = new Cellz[gridY];
 	}
 
 	rotate = 0;
@@ -47,105 +50,101 @@ void Game::InputGrid()
 	std::cin >> gridY;
 }
 
-void Game::CountNeighbours(int theGridX, int theGridY )
+int Game::CountNeighbours(int theGridX, int theGridY )
 {
 	//std::cout << "@@@Running Check Neighbourhood@@@" << std::endl;
 	int theNeighbours = 0;
 
-	//moore's neighbourhood check
-	theNeighbours += IncrementNeighbour(theGridX - 1, theGridY - 1); //top left-hand corner
-	theNeighbours += IncrementNeighbour(theGridX, theGridY - 1); // top of target 
-	theNeighbours += IncrementNeighbour(theGridX + 1, theGridY - 1); // top right-hand corner
-	theNeighbours += IncrementNeighbour(theGridX + 1, theGridY); // right of target
-	theNeighbours += IncrementNeighbour(theGridX + 1, theGridY + 1); // bottom right-hand corner
-	theNeighbours += IncrementNeighbour(theGridX, theGridY + 1); // bottom of target
-	theNeighbours += IncrementNeighbour(theGridX - 1, theGridY + 1); // bottom left-hand corner
-	theNeighbours += IncrementNeighbour(theGridX - 1, theGridY); // left of target
+	// 3 x 3 grid centred on theGridX,theGridY
+	for (int xx = theGridX - 1; xx <= theGridX + 1; ++xx)
+	{
+		for (int yy = theGridY - 1; yy <= theGridY + 1; ++yy)
+		{
+			if ((xx == theGridX) && (yy == theGridY))
+			{
+				// Current cell - ignore.
+			}
+			else
+			{
+				Pair newCoords = WrapCoords(xx, yy);
+				if (theGrid[newCoords.x][newCoords.y].GetCellState())
+				{
+					theNeighbours++;
+				}
+					
+			}
+		}
+	}
 
-	
-	std::cout << "X: " << theGridX << " Y: " << theGridY << " Count: " << theNeighbours;
-	theGrid[theGridX][theGridY].SetNeighbourhoodCount(theNeighbours);
-	//std::cout << "X: " << theGridX << " Y: " << theGridY << " Count: " << theGrid[theGridX][theGridY].GetNeighbourhoodCount() << std::endl;
-	//std::cout << "@@@Running Check Neighbourhood@@@" << std::endl;
+	return theNeighbours;
+
+
+
 }
 
-int Game::IncrementNeighbour(int inputX, int inputY)
+Pair Game::WrapCoords(int theGridX, int theGridY)
 {
-	int tempNeighbours = 0;
-	int wrapX = 0;
-	int wrapY = 0;
+	Pair newCoords;
+	newCoords.x = theGridX;
+	newCoords.y = theGridY;
 
-	if (inputX == -1)
+	if (theGridX < 0)
 	{
-		wrapX = gridX - 1;
+		newCoords.x = gridX - 1;
 	}
-	else if (inputX == gridX)
+		
+	if (theGridX >= gridX)
 	{
-		wrapX = 0;
+		newCoords.x = 0;
 	}
-	else
+		
+	if (theGridY < 0)
 	{
-		wrapX = inputX;
+		newCoords.y = gridY - 1;
 	}
-
-	if (inputY == -1)
+		
+	if (theGridY >= gridY)
 	{
-		wrapY = gridY - 1;
+		newCoords.y = 0;
 	}
-	else if (inputY == gridY)
-	{
-		wrapY = 0;
-	}
-	else
-	{
-		wrapY = inputY;
-	}
-
-	// to wrap the check around the grid
-	//wrapX = abs(inputX) % gridX; // not so sure about this absolute
-	//wrapY = abs(inputY) % gridY; // not so sure about this absolute
-
-	if (theGrid[wrapX][wrapY].GetCellState() == true)
-	{
-		tempNeighbours = 1;
-	}
-	else
-	{
-		tempNeighbours = 0;
-	}
-
-	//std::cout << "X: " << wrapX << " Y: " << wrapY << " Temp Neighbour: " << tempNeighbours << std::endl;
-	return tempNeighbours;
+		
+	return newCoords;
 }
+
 
 //Any live cell with fewer than two live neighbours dies(referred to as underpopulation or exposure[1]).
 //Any live cell with more than three live neighbours dies(referred to as overpopulation or overcrowding).
 //Any live cell with two or three live neighbours lives, unchanged, to the next generation.
 //Any dead cell with exactly three live neighbours will come to life.
 
+void Game::NewFrame()
+{
+	for (int ii = 0; ii < gridX; ++ii)
+	{
+		for (int jj = 0; jj < gridY; ++jj)
+		{
+			theGrid[ii][jj].SetCellState(theGrid[ii][jj].GetNextState());
+		}
+	}
+		
+}
+
 void Game::ChangeState(int theInputX, int theInputY)
 {	
-	//Change states for next iteration
-	theGrid[theInputX][theInputY].SetCellState(theGrid[theInputX][theInputY].GetNextState());
-	// Set next state to current
-	theGrid[theInputX][theInputY].SetNextState(theGrid[theInputX][theInputY].GetCellState());
-	
-	CountNeighbours(theInputX, theInputY);
+	// Change the state of a given cell based on how many neighbours are alive
+	int theNeighbours = CountNeighbours(theInputX, theInputY);
 
 	if (theGrid[theInputX][theInputY].GetCellState())
 	{
-		if (theGrid[theInputX][theInputY].GetNeighbourhoodCount() < 2 )
+		if (theNeighbours < 2 )
 		{
 			theGrid[theInputX][theInputY].SetNextState(false);
 		}
-		
-		if (theGrid[theInputX][theInputY].GetNeighbourhoodCount() > 3)
+		else if (theNeighbours > 3)
 		{
 			theGrid[theInputX][theInputY].SetNextState(false);
 		}
-		
-		if (theGrid[theInputX][theInputY].GetNeighbourhoodCount() >= 2 || 
-			theGrid[theInputX][theInputY].GetNeighbourhoodCount() <= 3)
+		else 
 		{
 			theGrid[theInputX][theInputY].SetNextState(true);
 		}
@@ -153,14 +152,14 @@ void Game::ChangeState(int theInputX, int theInputY)
 	}
 	else 
 	{
-		if (theGrid[theInputX][theInputY].GetNeighbourhoodCount() == 3)
+		if (theNeighbours == 3)
 		{
 			theGrid[theInputX][theInputY].SetNextState(true);
 		}
 	}
 
 	
-	std::cout << "===Change state result===" << std::endl;
+	//std::cout << "===Change state result===" << std::endl;
 	/*
 	for (int ii = 0; ii < gridX; ii++)
 	{
@@ -171,12 +170,12 @@ void Game::ChangeState(int theInputX, int theInputY)
 
 	}
 	*/
-	std::cout << "===Change state result===" << std::endl;
+	//std::cout << "===Change state result===" << std::endl;
 	
 
 }
 
-void Game::DrawSquare(int coordX, int coordY)
+void Game::DrawSquare(int coordX, int coordY, GLfloat theWidth, GLfloat theHeight)
 {
 	GLfloat drawX = 0.0;
 	GLfloat drawY = 0.0;
@@ -188,35 +187,35 @@ void Game::DrawSquare(int coordX, int coordY)
 	{
 
 		glPushMatrix();
-		glRotatef(180.0, 0.00, 1.00, 0.00);
+		//glRotatef(180.0, 0.00, 1.00, 0.00);
 			glBegin(GL_QUADS);
 				glColor3f(0.314f, 0.114f, 1.0f);    // Color Blue    
-				glVertex3f(drawX, drawY, 1.0f);    // Top Right Of The Quad (Front)
-				glVertex3f(drawX, drawY + 1, 1.0f);    // Top Left Of The Quad (Front)
-				glVertex3f(drawX + 1, drawY + 1, 1.0f);    // Bottom Left Of The Quad (Front)
-				glVertex3f(drawX + 1, drawY, 1.0f);		// Bottom Right Of The Quad (Front)
+				glVertex3f(drawX/theWidth, drawY / theHeight, 1.0f);    // Top Right Of The Quad (Front)
+				glVertex3f(drawX/theWidth, (drawY + 1)/theHeight, 1.0f);    // Top Left Of The Quad (Front)
+				glVertex3f((drawX + 1)/theWidth, (drawY + 1)/theHeight, 1.0f);    // Bottom Left Of The Quad (Front)
+				glVertex3f((drawX + 1)/theWidth, drawY/theHeight, 1.0f);		// Bottom Right Of The Quad (Front)
 			glEnd();
 		glPopMatrix();
 	}
 	else
 	{
 		glPushMatrix();
-		glRotatef(180.0, 0.00, 1.00, 0.00);
+		//glRotatef(180.0, 0.00, 1.00, 0.00);
 			glBegin(GL_QUADS);
 				glColor3f(1.0f, 0.996f, 0.643f);    // Color Yellow   
-				glVertex3f(drawX, drawY, 1.0f);    // Top Right Of The Quad (Front)
-				glVertex3f(drawX, drawY+1, 1.0f);    // Top Left Of The Quad (Front)
-				glVertex3f(drawX+1,drawY+1, 1.0f);    // Bottom Left Of The Quad (Front)
-				glVertex3f(drawX+1, drawY, 1.0f);		// Bottom Right Of The Quad (Front)
+				glVertex3f(drawX / theWidth, drawY / theHeight, 1.0f);    // Top Right Of The Quad (Front)
+				glVertex3f(drawX / theWidth, (drawY + 1) / theHeight, 1.0f);    // Top Left Of The Quad (Front)
+				glVertex3f((drawX + 1) / theWidth, (drawY + 1) / theHeight, 1.0f);    // Bottom Left Of The Quad (Front)
+				glVertex3f((drawX + 1) / theWidth, drawY / theHeight, 1.0f);		// Bottom Right Of The Quad (Front)
 			glEnd();
 		glPopMatrix();
 	}
 
 }
 
-void Game::DrawGrid()
+void Game::DrawGrid(GLfloat winWidth, GLfloat winHeight)
 {
-	std::cout << "---Drawing Grid---" << std::endl;
+	//std::cout << "---Drawing Grid---" << std::endl;
 	for (int ii = 0; ii < gridX; ii++)
 	{
 		for (int jj = 0; jj < gridY; jj++)
@@ -225,11 +224,13 @@ void Game::DrawGrid()
 			//ChangeState(ii, jj);
 			
 			//std::cout << "X: " << ii << " Y: " << jj << " State: " << theGrid[ii][jj].GetCellState() << " Next State:" << theGrid[ii][jj].GetNextState() << std::endl;
-			DrawSquare(ii, jj);
+			
+			
+			DrawSquare(ii, jj, winWidth, winHeight);
 			
 		}
 	}
-	std::cout << "---Drawing Grid---" << std::endl;
+	//std::cout << "---Drawing Grid---" << std::endl;
 }
 
 void Game::GameInit()
@@ -243,7 +244,6 @@ void Game::GameInit()
 			theGrid[ii][jj].SetPositionX(ii);
 			theGrid[ii][jj].SetPositionY(jj);
 			theGrid[ii][jj].SetCellState(false);
-			theGrid[ii][jj].SetNeighbourhoodCount(0);
 			theGrid[ii][jj].SetNextState(false);
 		}
 	}
@@ -258,12 +258,28 @@ void Game::GameInit()
 	theGrid[5][5].SetCellState(true);
 	theGrid[5][6].SetCellState(true);
 	theGrid[5][7].SetCellState(true);
-	theGrid[5][5].SetNeighbourhoodCount(1);
-	theGrid[5][6].SetNeighbourhoodCount(2);
-	theGrid[5][7].SetNeighbourhoodCount(1);
 	theGrid[5][5].SetNextState(true);
 	theGrid[5][6].SetNextState(true);
 	theGrid[5][7].SetNextState(true);
+
+	std::cout << "Run random seeding" << std::endl;
+	// random cell seeding
+	for (int ii = 0; ii < 3000; ii++)
+	{
+		int cellX;
+		int cellY;
+
+		cellX = rand() % gridX;
+		cellY = rand() % gridY;
+
+		std::cout << "cellX: " << cellX << " cellY: " << cellY << std::endl;
+
+		theGrid[cellX][cellY].SetPositionX(cellX);
+		theGrid[cellX][cellY].SetPositionY(cellY);
+		theGrid[cellX][cellY].SetCellState(true);
+		theGrid[cellX][cellY].SetNextState(true);
+	}
+	std::cout << "Finished random seeding" << std::endl;
 
 	/*
 	for (int ii = 0; ii < gridX; ii++)

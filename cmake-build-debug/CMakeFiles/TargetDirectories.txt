@@ -1,0 +1,14 @@
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/CMakeFiles/Tutorial3b_Conways_Game_Of_Life.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/CMakeFiles/install/local.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/CMakeFiles/install.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/CMakeFiles/list_install_components.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/CMakeFiles/install/strip.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/CMakeFiles/TEST_CONWAYS_GOL.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/CMakeFiles/install/local.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/CMakeFiles/install.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/CMakeFiles/edit_cache.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/CMakeFiles/rebuild_cache.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/CMakeFiles/list_install_components.dir
+D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/CMakeFiles/install/strip.dir

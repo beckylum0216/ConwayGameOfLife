@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Tutorial3b_Conways_Game_Of_Life"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Test_Conways_Game_Of_Life\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tutorial3b_Conways_Game_Of_Life">
+				<Option output="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Tutorial3b_Conways_Game_Of_Life.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/."/>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/freeglut-3.0.0/include"/>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life"/>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0/build/native/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tutorial3b_Conways_Game_Of_Life"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tutorial3b_Conways_Game_Of_Life/fast">
+				<Option output="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Tutorial3b_Conways_Game_Of_Life.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/."/>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/freeglut-3.0.0/include"/>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life"/>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0/build/native/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 Tutorial3b_Conways_Game_Of_Life/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install">
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="list_install_components">
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/strip">
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TEST_CONWAYS_GOL">
+				<Option output="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/libTEST_CONWAYS_GOL.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/../Tutorial3b_Conways_Game_Of_Life"/>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0/build/native/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/Makefile&quot;  VERBOSE=1 TEST_CONWAYS_GOL"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TEST_CONWAYS_GOL/fast">
+				<Option output="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/libTEST_CONWAYS_GOL.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/../Tutorial3b_Conways_Game_Of_Life"/>
+					<Add directory="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.0/build/native/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/4.9.3/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/Makefile&quot;  VERBOSE=1 TEST_CONWAYS_GOL/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/cmake-build-debug/Test_Conways_Game_Of_Life/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Cellz.cpp">
+			<Option target="Tutorial3b_Conways_Game_Of_Life"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Cellz.h">
+			<Option target="Tutorial3b_Conways_Game_Of_Life"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Game.cpp">
+			<Option target="Tutorial3b_Conways_Game_Of_Life"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Game.h">
+			<Option target="Tutorial3b_Conways_Game_Of_Life"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/GameManager.cpp">
+			<Option target="Tutorial3b_Conways_Game_Of_Life"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/GameManager.h">
+			<Option target="Tutorial3b_Conways_Game_Of_Life"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/pch.cpp">
+			<Option target="TEST_CONWAYS_GOL"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/pch.h">
+			<Option target="TEST_CONWAYS_GOL"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/main.cpp">
+			<Option target="Tutorial3b_Conways_Game_Of_Life"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Murdoch/ICT290/Tutorial3b_Conways_Game_Of_Life/Test_Conways_Game_Of_Life/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Test_Conways_Game_Of_Life\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

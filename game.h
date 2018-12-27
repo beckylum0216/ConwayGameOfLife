@@ -1,7 +1,14 @@
 #pragma once
 
-#include "Cell.h"
+#include <pch.h>
+#include "Cellz.h"
 #include <GL/glut.h>
+
+struct Pair
+{
+	int x;
+	int y;
+};
 
 class Game
 {
@@ -11,18 +18,19 @@ class Game
 		int GetGridX();
 		int GetGridY();
 		void InputGrid();
-		void CountNeighbours(int theGridX, int theGridY);
-		int IncrementNeighbour(int inputX, int inputY);
+		int CountNeighbours(int theGridX, int theGridY);
+		Pair WrapCoords(int theGridX, int theGridY);
 		void ChangeState(int theInputX, int theInputY);
-		void DrawSquare(int coordX, int coordY);
-		void DrawGrid();
+		void DrawSquare(int coordX, int coordY, GLfloat theWidth, GLfloat theHeight);
+		void DrawGrid(GLfloat winWidth, GLfloat winHeight);
 		void GameInit();
+		void NewFrame();
 		void SetRotate(GLfloat inputRotate);
 
 
 	private:
 		int gridX;
 		int gridY;
-		Cell ** theGrid;
+		Cellz ** theGrid;
 		GLfloat rotate;
 };
